@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,12 +47,11 @@ h1 {
 <body>
 
 	<div class="container">
-		<h1>Chào mừng đến Trang Admin</h1>
+		<h1>Chào mừng đến trang User</h1>
 		<form action="/WebJDBC/logout" method="GET">
 			<button type="submit" class="logout-btn">Đăng xuất</button>
 		</form>
 	</div>
-
 
 </body>
 </html>

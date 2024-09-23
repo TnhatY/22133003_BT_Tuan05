@@ -108,7 +108,7 @@ public class UserDaoImpl implements UserDao {
 			
 			User user1 = new User();
 			UserDaoImpl dao = new UserDaoImpl();
-			user1=dao.get("anh");
+			user1=dao.get("bao");
 			System.out.println(user1.getFullName());
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -133,14 +133,15 @@ public class UserDaoImpl implements UserDao {
 
 	@Override
 	public void update_Profile(User user) {
-		String sql = "UPDATE [User] SET email = ? , phone = ?, image = ? WHERE username = ?";
+		String sql = "UPDATE [User] SET fullname = ?, email = ? , phone = ?, image = ? WHERE username = ?";
 		try {
 			conn = new DBconnectionSQLServer().getConnection();
 			ps = conn.prepareStatement(sql);
-			ps.setString(1, user.getEmail());
-			ps.setString(2, user.getPhone());
-			ps.setString(3, user.getAvatar());
-			ps.setString(4, user.getUserName());
+			ps.setString(1, user.getFullName());
+			ps.setString(2, user.getEmail());
+			ps.setString(3, user.getPhone());
+			ps.setString(4, user.getAvatar());
+			ps.setString(5, user.getUserName());
 			ps.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();

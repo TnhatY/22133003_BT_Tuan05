@@ -32,7 +32,7 @@ public class LoginControler extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
-		HttpSession session = request.getSession(false);
+		HttpSession session = request.getSession();
 		if (session != null && session.getAttribute("account") != null) {
 			response.sendRedirect(request.getContextPath() + "/waiting");
 			return;
@@ -74,6 +74,7 @@ public class LoginControler extends HttpServlet {
 	        if(user!=null){
 	            HttpSession session = request.getSession(true);
 	            session.setAttribute("account", user);
+	            session.setAttribute("usernameS", username);
 	            if(isRememberMe){
 	                saveRemeberMe(response, username);
 	            }           
@@ -82,7 +83,7 @@ public class LoginControler extends HttpServlet {
 	        	
 	            alertMsg = "Tài khoản hoặc mật khẩu không đúng";
 	            request.setAttribute("alert", alertMsg);
-	            request.getRequestDispatcher("/views/test.html").forward(request, response);
+	            //request.getRequestDispatcher("/views/test.html").forward(request, response);
 	        }
 		
 		
