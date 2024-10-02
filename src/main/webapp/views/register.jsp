@@ -1,73 +1,70 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-   <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            width: 300px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            text-align: center;
-            color: #555;
-        }
-        input[type="text"], input[type="password"], input[type="email"], input[type="tel"] {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .btn {
-            width: 100%;
-            padding: 10px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .btn:hover {
-            background-color: #0056b3;
-        }
-        .footer-text {
-            text-align: center;
-            margin-top: 10px;
-        }
-        .footer-text a {
-            text-decoration: none;
-            color: #007bff;
-        }
-        .footer-text a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-	<div class="container">
-        <h2>Tạo tài khoản mới</h2>
-        <form action="/WebJDBC/register" method="POST">
-            <input type="text" name="username" placeholder="Tên đăng nhập  " required>
-            <input type="text" name="fullname" placeholder="Họ tên" required>
-            <input type="email" name="email" placeholder="Nhập Email" required>
-            <input type="tel" name="phone" placeholder="Số điện thoại" required>
-            <input type="password" name="password" placeholder="Mật khẩu" required>
-            <input type="password"  name="password"placeholder="Nhập lại mật khẩu" required>
-            <button type="submit" name="submit" class="btn">Tạo tài khoản</button>
-        </form>
-        <div class="footer-text">
-            Nếu bạn đã có tài khoản? <a href="/WebJDBC/login">Đăng nhập</a>
-        </div>
-    </div>
-</body>
-</html>
+
+
+<!-- Start Banner Area -->
+	<section class="banner-area organic-breadcrumb">
+		<div class="container">
+			<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+				<div class="col-first">
+					<h1>Login/Register</h1>
+					<nav class="d-flex align-items-center">
+						<a href="${pageContext.request.contextPath}/home">Home<span class="lnr lnr-arrow-right"></span></a>
+						<a href="${pageContext.request.contextPath}/login" style="margin-right: 5px;">Login</a> 
+						<p> / </p>
+						<a href="${pageContext.request.contextPath}/register" style="margin-left: 5px;"> Register</a>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Banner Area -->
+
+
+	<!--================Login Box Area =================-->
+	<section class="login_box_area section_gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="login_box_img">
+						<img class="img-fluid" src="${URL}assets/img/login.jpg" alt="">
+						<div class="hover">
+							<h4>New to our website?</h4>
+							<p>There are advances being made in science and technology everyday, and a good example of this is the</p>
+							<a class="primary-btn" href="${pageContext.request.contextPath}/register">Create an Account</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="login_form_inner">
+						<h3>register</h3>
+						<form class="row login_form" action="${pageContext.request.contextPath}/register" method="post" id="contactForm" novalidate="novalidate">
+							<div class="col-md-12 form-group">
+								<input type="text" class="form-control" id="name" name="username" placeholder="Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'">
+							</div>
+							<div class="col-md-12 form-group">
+								<input type="text" class="form-control" id="name" name="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
+							</div>
+							<div class="col-md-12 form-group">
+								<input type="text" class="form-control" id="name" name="fullname" placeholder="FullName" onfocus="this.placeholder = ''" onblur="this.placeholder = 'FullName'">
+							</div>
+							<div class="col-md-12 form-group">
+								<input type="text" class="form-control" id="name" name="email" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'">
+							</div>
+							<div class="col-md-12 form-group">
+								<input type="text" class="form-control" id="name" name="phone" placeholder="Phone" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone'">
+							</div>
+						
+							
+							<div class="col-md-12 form-group">
+								<button type="submit" value="submit" class="primary-btn">Sign In</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Login Box Area =================-->
+
+

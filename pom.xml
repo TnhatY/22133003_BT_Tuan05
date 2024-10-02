@@ -16,22 +16,10 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<!--
-		https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc -->
 		<dependency>
 			<groupId>com.microsoft.sqlserver</groupId>
 			<artifactId>mssql-jdbc</artifactId>
-			<version>9.4.1.jre8</version>
-		</dependency>
-		<dependency>
-			<groupId>org.sitemesh</groupId>
-			<artifactId>sitemesh</artifactId>
-			<version>3.2.1</version>
-		</dependency>
-		<dependency>
-			<groupId>opensymphony</groupId>
-			<artifactId>sitemesh</artifactId>
-			<version>2.5.0</version>
+			<version>9.2.1.jre8</version>
 		</dependency>
 
 		<!--
@@ -41,10 +29,13 @@
 			<artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
 			<version>3.0.2</version>
 		</dependency>
+		<!--
+		https://mvnrepository.com/artifact/jakarta.servlet.jsp/jakarta.servlet.jsp-api -->
 		<dependency>
-			<groupId>org.apache.taglibs</groupId>
-			<artifactId>taglibs-standard-impl</artifactId>
-			<version>1.2.5</version>
+			<groupId>jakarta.servlet.jsp</groupId>
+			<artifactId>jakarta.servlet.jsp-api</artifactId>
+			<version>4.0.0</version>
+			<scope>provided</scope>
 		</dependency>
 
 		<!--
@@ -55,17 +46,15 @@
 			<version>3.0.1</version>
 		</dependency>
 
-		<!--
-		https://mvnrepository.com/artifact/jakarta.servlet.jsp/jakarta.servlet.jsp-api -->
 		<dependency>
-			<groupId>jakarta.servlet.jsp</groupId>
-			<artifactId>jakarta.servlet.jsp-api</artifactId>
-			<version>4.0.0</version>
-			<scope>provided</scope>
+			<groupId>org.sitemesh</groupId>
+			<artifactId>sitemesh</artifactId>
+			<version>3.2.1</version>
 		</dependency>
 
 
 	</dependencies>
+
 
 	<build>
 		<plugins>

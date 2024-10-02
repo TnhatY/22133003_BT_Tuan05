@@ -64,7 +64,7 @@
 
 <div class="container">
     <h2>Đặt Lại Mật Khẩu</h2>
-    <form id="resetForm" action="forgetPass" method="POST">
+    <form id="resetForm" action="/WebJDBC/forgetPass" method="POST">
         <div class="input-group">
             <label for="new-password">Mật khẩu mới:</label>
             <input type="password" id="new-password" name="password" placeholder="Mật khẩu mới" required>

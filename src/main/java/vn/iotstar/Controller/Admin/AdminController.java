@@ -21,7 +21,8 @@ public class AdminController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.getRequestDispatcher("/views/admin/home.jsp").forward(request, response);
+		//response.sendRedirect(request.getContextPath()+"/admin/sanpham2");
+		request.getRequestDispatcher("/home").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
